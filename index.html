@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Send SMS</title>
+</head>
+<body>
+  <nav>Send SMS   <button type="submit" id="add-contacts">AddContacts</button></nav>
+  <div class="container">
+    <div class="contacts">
+      <h2>Contacts</h2>
+      <table id = "contacts-table">
+        <tr>
+          <th>Name</th>
+        </tr>
+      </table>
+    </div>
+      <div class="popup-container">
+        <div class="popup">
+          <h2>Add Contact</h2>
+          <h3>Currenly we are running on trial pack so your number will not receive OTP</h3>
+          <br>
+          <form id="contact-form">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname"  pattern="[A-Za-z]+" name="fname" placeholder="First Name" required>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" pattern="[A-Za-z]+" placeholder="Last Name" name="lname" required>
+            <label for="contact">Contact Number</label>
+            <input type="tel" minlength="10" maxlength="10" id="contact" name="contact" required>
+            <input type="submit" value="Add Contact">
+          </form>
+          <span class="close">&times;</span>
+        </div>
+      </div>
+    <div class="messages">
+      <h2>Messages</h2>
+      <table id = "listMessage-table">
+        <tr>
+          <th>Name</th>
+          <th>Sent at</th>
+          <th>OTP</th>
+        </tr>
+      </table>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+nav{
+  background-color: #333;
+  color: #f2f2f2;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+/* Container for the two lists */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Contacts list */
+.contacts {
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+}
+
+.contacts h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contacts table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.contacts td {
+  padding: 10px;
+}
+
+.contacts tr:nth-child(even) {
+  background-color: #FAF9F6;
+}
+
+/*popup box to add Contacts  */
+.popup-container {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup {
+	background-color: #fefefe;
+	margin: 10% auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%;
+}
+
+.popup h2 {
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+
+.popup label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.popup input[type="text"] {
+	display: block;
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+.popup input[type="submit"] {
+  background-color: #ddd;
+  color: #666;
+	padding: 8px 12px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  margin-top: 20px;
+}
+
+.popup input[type="submit"]:hover {
+	background-color: #ccc;
+}
+
+.popup .close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.popup .close:hover,
+.popup .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Messages list */
+.messages {
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  width: 500px;
+}
+
+.messages h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.messages table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.messages td {
+  padding: 10px;
+}
+
+.messages tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Style for contact card */
+.contact-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -100px;
+}
+
+.contact-info {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.contact-details {
+  margin-bottom: 20px;
+}
+
+.send-message-btn {
+  background-color: #ccc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background-color: #ccc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/*  */
+
+.popup-form {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.popup-form h2 {
+  margin-top: 0;
+}
+
+.popup-form form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin: 5% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+}
+
+
+.popup-form label,
+.popup-form input {
+  display: block;
+  width: 100%;
+}
+
+.popup-form input {
+  margin-bottom: 20px;
+}
+
+.popup-form button[type="submit"] {
+  display: block;
+  margin: 20px auto;
+}
+
+
+.popup-form button:hover {
+  background-color: #ddd;
+}
+
+.popup-form .close-btn {
+  position: absolute;
+  top: 60px;
+  right: 430px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ddd;
+  color: #666;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.popup-form .close-btn:hover {
+  background-color: #ccc;
+}
+
+.home-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
